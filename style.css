@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark100: #212121;
+    --dark200: #171717;
+    --dark300: #cdcdcd;
+    --white: #ececec;
+}
+
+.icon {
+    width: 18px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon.mid {
+    width: 28px;
+}
+
+.icon.big {
+    width: 48px;
+    padding: 8px;
+}
+
+.logo {
+    border: 1px solid rgba(236, 236, 236, 0.2);
+    border-radius: 50%;
+}
+
+.logo.mid {
+    padding: 4px;
+}
+
+
+
+.grid-box {
+    font-size: 14px;
+    width: 100vw;
+    height: 100svh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    color: var(--white);
+    line-height: 20px;
+}
+
+
+
+main {
+    background-color: var(--dark100);
+    display: grid;
+    grid-template-rows: 56px 1fr;
+}
+
+main header {
+    padding: 8px;
+}
+main header button{
+    display: none;
+}
+
+main header h1 {
+    font-size: 18px;
+}
+
+main header h1 span {
+    color: var(--dark300);
+}
+
+main .content {
+    justify-self: center;
+    width: 100%;
+    max-width: 752px;
+    position: relative;
+    overflow: hidden;
+    padding: 0 12px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .content .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+main .content .intro .logo {
+    margin-bottom: 12px;
+}
+
+main .content .intro p {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#search {
+    margin-top: auto;
+    width: 100%;
+}
+
+.suggestion-box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 12px;
+}
+
+.suggestion-box>.suggestion {
+    border: 1px solid rgba(236, 236, 236, 0.2);
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.suggestion-box>.suggestion:hover {
+    cursor: pointer;
+    background-color: rgba(236, 236, 236, 0.1);
+}
+
+.suggestion-box>.suggestion .topic {
+    font-size: 14px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.suggestion-box>.suggestion p {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #cdcdcd;
+}
+
+.search-bar {
+    border: none;
+    display: flex;
+    border: 1px solid rgba(236, 236, 236, 0.2);
+    border-radius: 16px;
+    font-size: 14px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.search-bar textarea {
+    width: 100%;
+    height: 52px;
+    padding: 14px 48px 14px 24px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--white);
+    resize: none;
+    line-height: 24px;
+}
+
+.search-bar button {
+    position: absolute;
+    bottom: 11px;
+    right: 11px;
+    border-radius: 7px;
+    width: 30px;
+    outline: none;
+    border: none;
+    background-color: var(--white);
+    aspect-ratio: 1;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+
+
+menu {
+    background-color: var(--dark200);
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+}
+
+menu header {
+    padding: 12px;
+    border-bottom: 1px solid #212121;
+}
+
+menu header .new-chat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+menu header .new-chat .left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+menu .content {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 0 12px;
+}
+
+menu .content:hover::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #2f2f2f;
+}
+
+menu .content::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+
+menu .content:hover::-webkit-scrollbar {
+    opacity: 1;
+}
+
+menu .content .day {
+    margin-bottom: 20px;
+}
+
+menu .content .chat {
+    padding: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 7px;
+    position: relative;
+}
+
+menu .new-chat:hover,
+menu .user:hover,
+menu .content .chat:hover {
+    cursor: pointer;
+    background-color: rgba(204, 204, 204, 0.1);
+}
+
+menu .foot {
+    padding: 12px;
+    border-top: 1px solid #212121;
+}
+
+menu .user {
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.profile-photo {
+    width: 36px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    aspect-ratio: 1;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.backdrop{
+    width: 100vw;
+    height: 100svh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: none;
+}
+.backdrop.active{
+    display: block;
+}
+@media screen and (max-width: 770px) {
+    menu {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        transition: .3s;
+        width: 320px;
+        left: -320px;
+    }
+    menu.active{
+        left: 0;
+    }
+
+    .grid-box {
+        grid-template-columns: 1fr;
+    }
+
+    main header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.1);
+        padding: 0;
+        position: relative;
+    }
+
+    main {
+        grid-template-rows: 42px 1fr;
+    }
+    main header button{
+        display: flex;
+        /* border: 1px solid white; */
+        position: absolute;
+        color: var(--white);
+        width: 42px;
+    }
+    main header button{
+        right: 0;
+    }
+    .menu-toggle{
+        left: 0;
+    }
+    
+    main header>* {
+        cursor: pointer;
+        color: var(--white);
+        border-radius: 5px;
+    }
+
+    main header h1 {
+        padding: 8px;
+    }
+}
