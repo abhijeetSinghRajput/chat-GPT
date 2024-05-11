@@ -323,11 +323,11 @@ button {
     menu.active{
         left: 0;
     }
-
+    
     .grid-box {
         grid-template-columns: 1fr;
     }
-
+    
     main header {
         display: flex;
         justify-content: center;
@@ -336,7 +336,7 @@ button {
         padding: 0;
         position: relative;
     }
-
+    
     main {
         grid-template-rows: 42px 1fr;
     }
@@ -359,8 +359,14 @@ button {
         color: var(--white);
         border-radius: 5px;
     }
-
+    
     main header h1 {
         padding: 8px;
+    }
+    
+}
+@media screen and (max-width: 550px) {
+    .suggestion-box {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
     }
 }
